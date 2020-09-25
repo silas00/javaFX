@@ -30,9 +30,9 @@
             </JFXTreeTableView>
             <HBox spacing="20.0">
                <children>
-                  <JFXTextField fx:id="tfNome" labelFloat="true" prefHeight="25.0" prefWidth="422.0" text="Nome" />
-                  <JFXTextField fx:id="tfCpf" prefHeight="25.0" prefWidth="173.0" text="CPF" />
-                  <JFXDatePicker fx:id="tfData" />
+                  <JFXTextField fx:id="tfNome" focusColor="#00acfc" labelFloat="true" prefHeight="25.0" prefWidth="422.0" promptText="Nome" />
+                  <JFXTextField fx:id="tfCpf" focusColor="#00acfc" labelFloat="true" prefHeight="25.0" prefWidth="173.0" promptText="CPF" />
+                  <JFXDatePicker fx:id="tdData" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="21.0" prefWidth="802.0" spacing="15.0">

@@ -65,10 +65,10 @@ public class CadastroController <S extends RecursiveTreeObject<S>> extends TreeT
 	}
 
 	private void initializeNodes() {
-		clId.setCellValueFactory(new TreeItemPropertyValueFactory("id"));
-		clNome.setCellValueFactory(new TreeItemPropertyValueFactory("nome"));
-		clCpf.setCellValueFactory(new TreeItemPropertyValueFactory("cpf"));
-		clData.setCellValueFactory(new TreeItemPropertyValueFactory("data"));
+		clId.setCellValueFactory(new TreeItemPropertyValueFactory<Usuario, Long>("id"));
+		clNome.setCellValueFactory(new TreeItemPropertyValueFactory<Usuario, String>("nome"));
+		clCpf.setCellValueFactory(new TreeItemPropertyValueFactory<Usuario, String>("cpf"));
+		clData.setCellValueFactory(new TreeItemPropertyValueFactory<Usuario, Date>("data"));
 
 	}
 
@@ -82,5 +82,6 @@ public class CadastroController <S extends RecursiveTreeObject<S>> extends TreeT
 		LocalDateTime time = tdData.getValue().atStartOfDay();
 		return Date.from(time.atZone(ZoneId.systemDefault()).toInstant());
 	}
-
+	
+	
 }
