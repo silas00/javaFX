@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.psg.cadastro.controller.CadastroController">
+   <children>
+      <VBox layoutX="11.0" layoutY="27.0" prefHeight="593.0" prefWidth="819.0" spacing="40.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString="2px" lineSpacing="5.0" prefHeight="66.0" prefWidth="831.0" style="-fx-background-color: #66b9bf;" text="C A D A S T R O  P E S S O A L" textFill="#f5f3f3" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Impact" size="57.0" />
+               </font>
+            </Label>
+            <JFXTreeTableView fx:id="tblCadastro" currentItemsCount="3">
+               <columns>
+                  <TreeTableColumn fx:id="clId" prefWidth="41.0" text="Id" />
+                  <TreeTableColumn fx:id="clNome" prefWidth="421.0" text="Nome" />
+                  <TreeTableColumn fx:id="clCpf" prefWidth="196.0" text="CPF" />
+                  <TreeTableColumn fx:id="clData" prefWidth="160.0" text="Data de Nascimento" />
+               </columns>
+            </JFXTreeTableView>
+            <HBox spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="tfNome" labelFloat="true" prefHeight="25.0" prefWidth="422.0" text="Nome" />
+                  <JFXTextField fx:id="tfCpf" prefHeight="25.0" prefWidth="173.0" text="CPF" />
+                  <JFXDatePicker fx:id="tfData" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="21.0" prefWidth="802.0" spacing="15.0">
+               <children>
+                  <JFXButton fx:id="btnSalvar" layoutX="394.0" layoutY="10.0" onAction="#btnSalvar" style="-fx-background-color: #66b9bf;" text="Salvar" textFill="WHITE" />
+                  <JFXButton fx:id="btnAtualizar" layoutX="394.0" layoutY="10.0" style="-fx-background-color: #026EAD;" text="Atualizar" textFill="WHITE" />
+                  <JFXButton fx:id="btnApagar" layoutX="427.0" layoutY="10.0" style="-fx-background-color: #FA0F17;" text="Apagar" textFill="WHITE" />
+                  <JFXButton fx:id="btnLimpar" layoutX="461.0" layoutY="10.0" style="-fx-background-color: #4FAD02;" text="Limpar" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
