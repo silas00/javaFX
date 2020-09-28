@@ -10,9 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
+
 @Entity
 @Table(name = "USUARIO")
-public class Usuario implements Serializable {
+public class Usuario extends RecursiveTreeObject<Usuario> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

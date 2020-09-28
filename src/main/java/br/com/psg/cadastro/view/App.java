@@ -18,7 +18,7 @@ public class App extends Application {
 	public void start(Stage stage) throws Exception {
 		URL fxml = getClass().getResource("./cadastro.fxml");
 		Parent parent = FXMLLoader.load(fxml);
-		stage.setTitle("Cadastro de pessoa!");
+		stage.setTitle("Cadastro de Pessoa");
 		stage.setScene(new Scene(parent));
 		stage.show();
 	}

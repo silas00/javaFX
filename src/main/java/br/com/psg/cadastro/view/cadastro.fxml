@@ -3,9 +3,9 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -20,14 +20,14 @@
                   <Font name="Impact" size="57.0" />
                </font>
             </Label>
-            <JFXTreeTableView fx:id="tblCadastro" currentItemsCount="3">
+            <TableView fx:id="tblCadastro" prefHeight="375.0" prefWidth="819.0">
                <columns>
-                  <TreeTableColumn fx:id="clId" prefWidth="41.0" text="Id" />
-                  <TreeTableColumn fx:id="clNome" prefWidth="421.0" text="Nome" />
-                  <TreeTableColumn fx:id="clCpf" prefWidth="196.0" text="CPF" />
-                  <TreeTableColumn fx:id="clData" prefWidth="160.0" text="Data de Nascimento" />
+                  <TableColumn fx:id="clId" prefWidth="46.0" style="-fx-alignment: CENTER;" text="Id" />
+                  <TableColumn fx:id="clNome" prefWidth="440.0" style="-fx-alignment: CENTER-LEFT;" text="Nome" />
+                  <TableColumn fx:id="clCpf" minWidth="0.0" style="-fx-alignment: CENTER;" prefWidth="160.0" text="CPF" />
+                  <TableColumn fx:id="clData" prefWidth="172.0" style="-fx-alignment: CENTER;" text="Data de Nascimento" />
                </columns>
-            </JFXTreeTableView>
+            </TableView>
             <HBox spacing="20.0">
                <children>
                   <JFXTextField fx:id="tfNome" focusColor="#00acfc" labelFloat="true" prefHeight="25.0" prefWidth="422.0" promptText="Nome" />
@@ -38,9 +38,9 @@
             <HBox alignment="CENTER" prefHeight="21.0" prefWidth="802.0" spacing="15.0">
                <children>
                   <JFXButton fx:id="btnSalvar" layoutX="394.0" layoutY="10.0" onAction="#btnSalvar" style="-fx-background-color: #66b9bf;" text="Salvar" textFill="WHITE" />
-                  <JFXButton fx:id="btnAtualizar" layoutX="394.0" layoutY="10.0" style="-fx-background-color: #026EAD;" text="Atualizar" textFill="WHITE" />
-                  <JFXButton fx:id="btnApagar" layoutX="427.0" layoutY="10.0" style="-fx-background-color: #FA0F17;" text="Apagar" textFill="WHITE" />
-                  <JFXButton fx:id="btnLimpar" layoutX="461.0" layoutY="10.0" style="-fx-background-color: #4FAD02;" text="Limpar" textFill="WHITE" />
+                  <JFXButton fx:id="btnAtualizar" layoutX="394.0" layoutY="10.0" onAction="#btnAtualizar" style="-fx-background-color: #026EAD;" text="Atualizar" textFill="WHITE" />
+                  <JFXButton fx:id="btnApagar" layoutX="427.0" layoutY="10.0" onAction="#btnApagar" style="-fx-background-color: #FA0F17;" text="Apagar" textFill="WHITE" />
+                  <JFXButton fx:id="btnLimpar" layoutX="461.0" layoutY="10.0" onAction="#btnLimpar" style="-fx-background-color: #4FAD02;" text="Limpar" textFill="WHITE" />
                </children>
             </HBox>
          </children>
