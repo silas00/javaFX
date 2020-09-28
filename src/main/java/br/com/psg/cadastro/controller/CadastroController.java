@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 import br.com.psg.cadastro.dao.UsuarioDAO;
 import br.com.psg.cadastro.dao.impl.UsuarioDAOImpl;
 import br.com.psg.cadastro.model.Usuario;
+import javafx.beans.binding.BooleanBinding;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -110,6 +111,7 @@ public class CadastroController implements Initializable {
 
 	}
 	
+	//Atualizar usuario//
 	public void btnAtualizar() {
 		Usuario us = tblCadastro.getSelectionModel().getSelectedItem();
 		setUser(us);
@@ -150,6 +152,18 @@ public class CadastroController implements Initializable {
 	}
 	
 	private void configTable() {
+		
+        BooleanBinding camposPreenchidos = tfNome.textProperty().isEmpty()
+                .or(tfCpf.textProperty().isEmpty())
+                .or(tdData.valueProperty().isNull());
+        //Verifica se há algo selecionado na tabela//
+        BooleanBinding algoSelecionado = tblCadastro.getSelectionModel().selectedItemProperty().isNull();
+        //Alguns botões só são habilitados se algo for selecionado na tabela//
+        btnApagar.disableProperty().bind(algoSelecionado);
+        btnAtualizar.disableProperty().bind(algoSelecionado);
+        btnLimpar.disableProperty().bind(algoSelecionado);
+        //O botão Salvar só é habilitado se todos os campos estiverem preenchidos//
+        btnSalvar.disableProperty().bind(algoSelecionado.not().or(camposPreenchidos));
 		
 		//Seleciona linha para no input para atualizar ou deletar usuario//
 		tblCadastro.getSelectionModel().selectedItemProperty().addListener((b, o, n) -> {

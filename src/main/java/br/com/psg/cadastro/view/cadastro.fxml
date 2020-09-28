@@ -24,7 +24,7 @@
                <columns>
                   <TableColumn fx:id="clId" prefWidth="46.0" style="-fx-alignment: CENTER;" text="Id" />
                   <TableColumn fx:id="clNome" prefWidth="440.0" style="-fx-alignment: CENTER-LEFT;" text="Nome" />
-                  <TableColumn fx:id="clCpf" minWidth="0.0" style="-fx-alignment: CENTER;" prefWidth="160.0" text="CPF" />
+                  <TableColumn fx:id="clCpf" minWidth="0.0" prefWidth="160.0" style="-fx-alignment: CENTER;" text="CPF" />
                   <TableColumn fx:id="clData" prefWidth="172.0" style="-fx-alignment: CENTER;" text="Data de Nascimento" />
                </columns>
             </TableView>
@@ -37,10 +37,10 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="21.0" prefWidth="802.0" spacing="15.0">
                <children>
-                  <JFXButton fx:id="btnSalvar" layoutX="394.0" layoutY="10.0" onAction="#btnSalvar" style="-fx-background-color: #66b9bf;" text="Salvar" textFill="WHITE" />
+                  <JFXButton fx:id="btnSalvar" alignment="BOTTOM_LEFT" contentDisplay="RIGHT" layoutX="394.0" layoutY="10.0" onAction="#btnSalvar" style="-fx-background-color: #4FAD02;" text="Salvar" textFill="WHITE" />
                   <JFXButton fx:id="btnAtualizar" layoutX="394.0" layoutY="10.0" onAction="#btnAtualizar" style="-fx-background-color: #026EAD;" text="Atualizar" textFill="WHITE" />
                   <JFXButton fx:id="btnApagar" layoutX="427.0" layoutY="10.0" onAction="#btnApagar" style="-fx-background-color: #FA0F17;" text="Apagar" textFill="WHITE" />
-                  <JFXButton fx:id="btnLimpar" layoutX="461.0" layoutY="10.0" onAction="#btnLimpar" style="-fx-background-color: #4FAD02;" text="Limpar" textFill="WHITE" />
+                  <JFXButton fx:id="btnLimpar" layoutX="461.0" layoutY="10.0" onAction="#btnLimpar" style="-fx-background-color: #808080;" text="Limpar Campos" textFill="#fff8f8" />
                </children>
             </HBox>
          </children>
